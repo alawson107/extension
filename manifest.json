@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Kuloo Web Clipper",
+  "version": "1.19",
+  "description": "Clip web pages and save them to your Kuloo channel",
+  "browser_action": {
+    "default_icon": "images/kuloo.png",
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "scripts": ["scripts/jquery-3.4.1.min.js","scripts/bluebird.min.js","scripts/underscore.js",
+      "scripts/underscore.string.min.js","src/jnx-back.js","src/background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "activeTab", "https://app.kuloo.com/*"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "icons": {
+    "16": "Ku-16.png",
+    "48": "Ku-48.png",
+    "128": "Ku-128.png"
+  }
+}
